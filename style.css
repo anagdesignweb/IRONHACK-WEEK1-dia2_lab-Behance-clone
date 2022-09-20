@@ -15,7 +15,7 @@ h3 {
 height: 270px;
 }
 .color-header-grandient{
-    background-image: linear-gradient(rgba(0, 0, 0), rgba(77, 76, 76, 0.5)); 
+    background-image: linear-gradient(rgb(26, 25, 25), rgba(77, 76, 76, 0.5)); 
 }
 .color-header-grandient:hover{
     background-image: linear-gradient(rgb(14, 18, 26), rgb(77, 112, 172));
@@ -25,8 +25,12 @@ height: 270px;
     width: 25px;
     padding: 0 20px;
 }
+.header-logo2{
+    width: 80px;
+    margin-left: 10px;
+}
 .header-1{
-    border: 1px solid red;
+
     padding: 8px;
     height: 50px;
     border-bottom: solid 1px rgb(180, 180, 180, 0.5);
@@ -35,18 +39,15 @@ height: 270px;
     justify-content: space-between;
 
 }
-.header-nav1{
-    border: 1px solid red;
-}
-.header-nav2{
-    border: 1px solid red;
-}
+
 .header-nav3{
     padding: 0 20px;
-    width: 30%;
-    border: 1px solid red;
     display: flex;
-
+    justify-content: space-between;
+    align-items: center;
+}
+.header-nav3 > *{
+    padding: 0 10px;
 }
 nav{
     display: flex;
@@ -56,6 +57,9 @@ nav > a{
     font-weight: 300;
     color: white;
     padding: 0 10px;
+}
+nav > a:hover{
+color: #bbbaba;
 }
 .header-input{
     margin: 0 30px;
@@ -82,6 +86,7 @@ nav > a{
     font-weight: 700;
     text-align: center;
     padding: 10px 14px;
+    margin-right: 25px;
     background: white;
     color: #191919;
     height: 38px;
@@ -89,9 +94,13 @@ nav > a{
 .header-button:hover{
     background-color: rgba(148, 148, 148, 0.856);
 }
-
-
-
+.icons{
+    color: white;
+    font-size: 25px;
+}
+.icons:hover{
+    color: #bbbaba;
+}
 
 .main{
     position: relative;
@@ -103,7 +112,7 @@ nav > a{
     left: 50px;
     z-index: +5;
     width: 420px;
-    height: 600px;
+    height: 800px;
     background-color: white;
     box-shadow: 1px 1px 1px 1px rgba(75, 75, 75, 0.1);
     border-radius: 3px;
@@ -116,14 +125,38 @@ nav > a{
     padding:20px 10px;
     position: absolute;
     right: 0;
-    border: 1px solid red;
 }
 .main-galeria > div {
     padding: 10px;
-    border: 1px solid red;
     border-radius: 3px;
 }
 .main-galeria > div > img {
     width: 250px;
 }
-
+.main-user{
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.main-user > div{
+    background-image: url(./img/imagen-usuario.png);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+}
+.main-user-texto{
+    padding: 20px 0;
+    text-align: center;
+}
+.main-user-texto > h2{
+    font-size: 2.2rem;
+}
+.main-user-texto > h4{
+    color: #979696;
+    padding-top: 20px;
+}
