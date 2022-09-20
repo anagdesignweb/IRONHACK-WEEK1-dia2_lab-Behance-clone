@@ -5,10 +5,14 @@
 }
 body{
     background-color: #F9F9F9;
+    max-width: 1400px;
+    margin: auto;
+}
+h3 {
+    font-size: 16px;
 }
 .header{
 height: 270px;
-
 }
 .color-header-grandient{
     background-image: linear-gradient(rgba(0, 0, 0), rgba(77, 76, 76, 0.5)); 
@@ -22,45 +26,73 @@ height: 270px;
     padding: 0 20px;
 }
 .header-1{
+    border: 1px solid red;
     padding: 8px;
-    height: 40px;
+    height: 50px;
     border-bottom: solid 1px rgb(180, 180, 180, 0.5);
     display: flex;
-
     align-items: center;
+    justify-content: space-between;
+
+}
+.header-nav1{
+    border: 1px solid red;
+}
+.header-nav2{
+    border: 1px solid red;
+}
+.header-nav3{
+    padding: 0 20px;
+    width: 30%;
+    border: 1px solid red;
+    display: flex;
+
+}
+nav{
+    display: flex;
 }
 nav > a{
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 300;
     color: white;
     padding: 0 10px;
 }
 .header-input{
-    border: solid 1px red;
     margin: 0 30px;
     backdrop-filter: blur(10px);
     background-color: rgba(255,255,255,.3);
-    border: 1px solid #e8e8e8;
     border-radius: 50px;
-    height: 32px;
-
+    height: 38px;
 }
-::placeholder { 
+.header-input::placeholder { 
+
     padding: 10px;
     color: white;
     font-weight: 500;
 }
 .header-button{
-    border-radius: 50px;
-    background: white;
-    border: 2px solid #e8e8e8;
-    color: #191919;
-    height: 32px;
-    margin: 0 40px;
+    display: inline-block;
+    outline: none;
     cursor: pointer;
-    font-weight: 600;
-    padding: 5px;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    border: 1px solid transparent;
+    min-width: 200px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 14px;
+    background: white;
+    color: #191919;
+    height: 38px;
 }
+.header-button:hover{
+    background-color: rgba(148, 148, 148, 0.856);
+}
+
+
+
+
 .main{
     position: relative;
     min-height: 1200px;
@@ -70,9 +102,28 @@ nav > a{
     top: -150px;
     left: 50px;
     z-index: +5;
-    width: 360px;
-    height: 500px;
+    width: 420px;
+    height: 600px;
     background-color: white;
     box-shadow: 1px 1px 1px 1px rgba(75, 75, 75, 0.1);
     border-radius: 3px;
 }
+.main-galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    padding:20px 10px;
+    position: absolute;
+    right: 0;
+    border: 1px solid red;
+}
+.main-galeria > div {
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 3px;
+}
+.main-galeria > div > img {
+    width: 250px;
+}
+
