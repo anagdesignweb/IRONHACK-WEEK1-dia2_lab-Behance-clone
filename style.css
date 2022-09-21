@@ -1,3 +1,5 @@
+/*-- GENERALES --*/
+
 *,*::after, *::before {
     padding: 0;
     margin: 0;
@@ -11,8 +13,40 @@ body{
 h3 {
     font-size: 16px;
 }
+.button-general{
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    border: 1px solid transparent;
+    min-width: 200px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 14px;
+    height: 38px;
+}
+.icons{
+    color: white;
+    font-size: 25px;
+}
+.icons:hover{
+    color: #bbbaba;
+}
+
+/* -- HEADER -- */
+
 .header{
-height: 270px;
+    height: 270px;
+}
+.header-1{
+    padding: 8px 15px;
+    height: 50px;
+    border-bottom: solid 1px rgb(180, 180, 180, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .color-header-grandient{
     background-image: linear-gradient(rgb(26, 25, 25), rgba(77, 76, 76, 0.5)); 
@@ -22,33 +56,9 @@ height: 270px;
     transition: all 5s ease;
 }
 .header-logo1{
-    width: 25px;
-    padding: 0 20px;
-}
-.header-logo2{
-    width: 80px;
-    margin-left: 10px;
-}
-.header-1{
-
-    padding: 8px;
-    height: 50px;
-    border-bottom: solid 1px rgb(180, 180, 180, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+    width: 25px;padding-right: 10px;
 }
 
-.header-nav3{
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.header-nav3 > *{
-    padding: 0 10px;
-}
 nav{
     display: flex;
 }
@@ -63,45 +73,46 @@ color: #bbbaba;
 }
 .header-input{
     margin: 0 30px;
-    backdrop-filter: blur(10px);
     background-color: rgba(255,255,255,.3);
     border-radius: 50px;
-    height: 38px;
-}
-.header-input::placeholder { 
-
-    padding: 10px;
-    color: white;
-    font-weight: 500;
-}
-.header-button{
     display: inline-block;
     outline: none;
     cursor: pointer;
     font-size: 14px;
-    line-height: 1;
-    border-radius: 500px;
+    border-radius: 50px;
     border: 1px solid transparent;
-    min-width: 200px;
+    min-width: 300px;
     font-weight: 700;
     text-align: center;
-    padding: 10px 14px;
+    height: 38px;
+}
+.header-input::placeholder { 
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+}
+
+.header-button{
     margin-right: 25px;
     background: white;
     color: #191919;
-    height: 38px;
 }
 .header-button:hover{
     background-color: rgba(148, 148, 148, 0.856);
 }
-.icons{
-    color: white;
-    font-size: 25px;
+.header-nav3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.icons:hover{
-    color: #bbbaba;
+.header-nav3 > *{
+    padding: 0 10px;
+}
+.header-logo2{
+    width: 80px;
 }
 
+/* -- MAIN --*/
 .main{
     position: relative;
     min-height: 1200px;
@@ -111,28 +122,50 @@ color: #bbbaba;
     top: -150px;
     left: 50px;
     z-index: +5;
-    width: 420px;
-    height: 800px;
+    width: 380px;
+    min-height: 800px;
     background-color: white;
     box-shadow: 1px 1px 1px 1px rgba(75, 75, 75, 0.1);
     border-radius: 3px;
+    padding: 30px;
 }
-.main-galeria{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.main-derecha{
     width: 60%;
     padding:20px 10px;
     position: absolute;
     right: 0;
 }
+/* .main-galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid red;
+}
 .main-galeria > div {
     padding: 10px;
     border-radius: 3px;
+    border: 1px solid rgb(151, 28, 189);
 }
 .main-galeria > div > img {
     width: 250px;
+    border: 1px solid rgb(60, 179, 6);
+} */
+
+.main-galeria{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
 }
+  .main-galeria > div {
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid rgb(151, 28, 189);
+}
+.main-galeria > div > img {
+    width: 200px;
+    border: 1px solid rgb(60, 179, 6);
+}
+
 .main-user{
     height: 25%;
     display: flex;
@@ -158,5 +191,37 @@ color: #bbbaba;
 }
 .main-user-texto > h4{
     color: #979696;
-    padding-top: 20px;
+    margin: 10px;
+}
+.main-user-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+.main-user-texto > div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 5px;
+}
+.main-user-texto > p {
+    text-align: justify;
+    margin: 10px;
+}
+.button-main-user{
+    background: rgb(30, 56, 207);
+    color: #ffffff;
+    width: 100%;
+    margin: 10px 0;
+}
+.main-derecha-menu > a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    padding-right: 25px;
+    font-size: 0.9rem;
+}
+.main-derecha-menu > a:hover{
+    color: grey;
 }
